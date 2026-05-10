@@ -1,27 +1,27 @@
 # Coat of Arms modding
 *Coat of Arms* or *CoA* or *Flags*
-В дальнейшем все Coat of Arms будут называться Флагами.
+In the future, all Coat of Arms will be called Flags.
 
-Файлы флагов распологаются в двух директориях, графические файлы находятся в `gfx/coat_of_arms/`, а конфигурация уже в `common/coat_of_arms/`.
-**В данном руководстве будет рассмотрена только графическая часть и базовая конфигурация флагов.**
+The flag files are located in two directories, the graphic files are located in `gfx/coat_of_arms/`, and the configuration is already in `common/coat_of_arms/`.
+**This guide will cover only the graphical part and the basic configuration of the flags.**
 
-# Основы
-Флаги состоят из 3х элементов, это **color**, **pattern** and **emblem**. Эмблемы же разделяются на **textured** and **colored**.
+## Basics
+Flags consist of 3 elements, these are **color**, **pattern** and **emblem**. Emblems are divided into **textured** and **colored**.
 
 ### Color
-Цвета указываются либо в файле конфигурации флага, либо в отдельном файле с цветами в директории `common/named_colors/`. Игра поддерживает форматы **rgb** and **hsv**.
-В конфигурации флага можно указать цвет флага двумя способами **tag** or **color code**.
+The colors are specified either in the flag configuration file or in a separate color file in the `common/named_colors/` directory. The game supports **rgb** and **hsv** formats.
+In the flag configuration, you can specify the flag color in two ways **tag** or **color code**.
 `color1 = custom_flag_color`,
 `color1 = rgb { 255 255 255}`/
 `color1 = hsv { 1.0 1.0 1.0}`
-В случае использования **tag** для цвета флага, нужно указать его цвет в файле в `common/named_colors/`.
+If you use **tag** for the flag color, you need to specify its color in the file in `common/named_colors/`.
 ```
 colors = {
 	custom_flag_color = rgb { 255 255 255}
 }
 ```
 ### Pattern
-Используется как основа флага. Использует изображения из `gfx/coat_of_arms/patterns/`, в изображение может использоваться до 3х цветов. В последующем каждый из этих цветов можно будет использовать как **mask** for **emblem**.
+It is used as the base of the flag. Uses images from `gfx/coat_of_arms/patterns/`, up to 3 colors can be used in the image. In the future, each of these colors can be used as a **mask** for **emblem**.
 | color | name | rgb code |
 | --- | --- | --- |
 | 1 | color1 | 255 0 0 |
@@ -41,9 +41,9 @@ FRA = {
 <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/3color.png?raw=true" alt="" width="470" height="102">
 
 ### Emblem
-Emblems позволяют добавлять дополнительные изображения на флаг, они разделяются на **textured** and **colored**. А так-же можно управлять их отображением на флаге при помощи **position**, **scale**, **rotation** and **mask**.
-**Position** используется для расположения **emblem** на флаге.
-**Scale** используется для изменения размера **emblem** на флаге.
+Emblems allows you to add additional images to the flag, they are divided into **textured** and **colored**. You can also control their display on the flag using **position**, **scale**, **rotation** and **mask**.
+**Position** is used to position the **emblem** on the flag.
+**Scale** is used to change the size of the **emblem** on the flag.
 ```
 	textured_emblem = {
 		texture = "n_america/RUA/RUA_eagle.dds"
@@ -52,7 +52,7 @@ Emblems позволяют добавлять дополнительные из�
 ```
 <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/textured_emblem.png?raw=true" alt="" width="470" height="102">
 
-**Rotation** используется для поворота emblem на флаге.
+**Rotation** used to rotate the emblem on the flag.
 ```
 	colored_emblem = {
 		texture = "europe/POR/POR_coa.dds"
@@ -64,7 +64,7 @@ Emblems позволяют добавлять дополнительные из�
 ```
 <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/rotation.png?raw=true" alt="" width="470" height="102">
 
-**Mask** используется для расположения 
+**Mask** used to color a specific flag color.
 ```
 	pattern = "pattern_diagonal_split_01.tga"
 	color1 = "full_white"
@@ -80,8 +80,10 @@ Emblems позволяют добавлять дополнительные из�
 	}
 ```
 <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/mask.png?raw=true" alt="" width="470" height="102">
+
 ### Textured emblem
-Используются изображения из директории `gfx/coat_of_arms/textured_emblems/`.
+They use images from the directory `gfx/coat_of_arms/textured_emblems/`.
+
 #### Example
 ```
 	textured_emblem = {
@@ -91,8 +93,42 @@ Emblems позволяют добавлять дополнительные из�
 ```
 <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/textured_emblem.png?raw=true" alt="" width="470" height="102">
 
+### Colored emblem
+They use images from the directory `gfx/coat_of_arms/colored_emblems/`.
+The vanilla version of **ImperatorRome** uses **emblem** with only 2 colors when using the file `[gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.shader](https://github.com/MIUNO/ImperatorRomeNotes/blob/main/gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.shader)` they can be expanded to 3x, but vanilla emblems will no longer work, while you can use emblems from new *Paradox* games such as **ck3**, **vic3** or **eu5**.
+
+#### Colored emblem colors
+| color | name | R | G | B (brightness) |
+| --- | --- | --- | --- | --- |
+| vanilla | color1 | 255 | 0 | 128 |
+| vanilla | color2 | 255 | 255 | 128 |
+| vanilla | color3 | | | |
+| custom | color1 | 0 | 0 | 128 |
+| custom | color2 | 0 | 255 | 128 |
+| custom | color3 | 255 | 0 | 128 |
+By default, the brightness is 128, when using values in the range from 0 to 255, the set color will be darker or brighter, respectively.
+Visual range of colors (not exact): **Vanilla**/**Custom**
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-1.png?raw=true" alt="" width="128" height="85">
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-2.png?raw=true" alt="" width="128" height="85">
+Example emblems: **Vanilla**/**Custom**
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-4.png?raw=true" alt="" width="128" height="128">
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-5.png?raw=true" alt="" width="128" height="128">
+
+#### Example
+```
+	colored_emblem = {
+		texture = "europe/POR/POR_coa.dds"
+		color1 = "POR_yellow"
+		color2 = "full_black"
+		color3 = "full_black"
+		instance = { position = { 0.5 0.62 } scale = { 0.37 0.6 } }
+	}
+```
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/colored_emblem.png?raw=true" alt="" width="470" height="102">
+
 ### Sub
-Используется для добавления на флаг уже готовых флагов.
+It is used to add ready-made flags to the flag.
+
 #### Example
 ```
     sub = {
@@ -101,3 +137,111 @@ Emblems позволяют добавлять дополнительные из�
     }
 ```
 <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/sub.png?raw=true" alt="" width="470" height="102">
+
+## Additionally
+Additionally, you can read the articles on the wiki: [ir](https://imperator.paradoxwikis.com/Coat_of_arms_modding) [ck3](https://ck3.paradoxwikis.com/Coat_of_arms_modding) [vic3](https://vic3.paradoxwikis.com/Flag_modding) [eu5](https://eu5.paradoxwikis.com/Flag_modding)
+
+### Mipmap
+Although this is not so noticeable, using **mipmap** allows you to keep the detail of the flags when they are reduced.
+
+#### No use mipmap/use mipmap
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/no_use_mipmap.png?raw=true" alt="" width="470" height="102">
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/use_mipmap.png?raw=true" alt="" width="470" height="102">
+
+### Pink artifacts
+When using the Colored emblem, there may be a problem with pink artifacts along the outline of the emblem.
+
+#### Example artifacts
+```
+	colored_emblem = {
+		texture = "europe/POR/POR_coa.dds"
+		color1 = "POR_yellow"
+		instance = { position = { 0.5 0.62 } scale = { 0.37 0.6 } }
+	}
+```
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/color_bug.png?raw=true" alt="" width="470" height="102">
+
+This can be fixed by adding black to the remaining colors, for example.
+
+#### Example fix
+```
+	colored_emblem = {
+		texture = "europe/POR/POR_coa.dds"
+		color1 = "POR_yellow"
+		color2 = "full_black"
+		color3 = "full_black"
+		instance = { position = { 0.5 0.62 } scale = { 0.37 0.6 } }
+	}
+```
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/color_fix.png?raw=true" alt="" width="470" height="102">
+
+## Ready flag example
+```
+POR = {
+	pattern = "pattern_solid.tga"
+	color1 = "full_white"
+	color2 = "POR_blue"
+
+	colored_emblem = {
+		texture = "europe/POR/POR_coa.dds"
+		color1 = "POR_yellow"
+		color2 = "full_black"
+		color3 = "full_black"
+		instance = { position = { 0.5 0.62 } scale = { 0.37 0.6 } }
+	}
+	colored_emblem = {
+		texture = "symbols/shield_01.dds"
+		color1 = "POR_yellow"
+		color2 = "full_black"
+		color3 = "full_black"
+		instance = { position = { 0.5 0.6 } scale = { 0.22 0.5 } }
+	}
+	colored_emblem = {
+		texture = "symbols/shield_01.dds"
+		color1 = "POR_red"
+		color2 = "full_black"
+		color3 = "full_black"
+		instance = { position = { 0.5 0.6 } scale = { 0.2 0.46 } }
+	}
+	colored_emblem = {
+		texture = "symbols/shield_01.dds"
+		color1 = "full_white"
+		color2 = "full_black"
+		color3 = "full_black"
+		instance = { position = { 0.5 0.595 } scale = { 0.1 0.26 } }
+	}
+	colored_emblem = {
+		texture = "europe/POR/POR_shield.dds"
+		color1 = "POR_blue"
+		color2 = "POR_blue"
+		color3 = "POR_blue"
+		instance = { position = { 0.47 0.59 } scale = { 0.035 0.05 } }
+		instance = { position = { 0.5 0.53 } scale = { 0.035 0.05 } }
+		instance = { position = { 0.5 0.59 } scale = { 0.035 0.05 } }
+		instance = { position = { 0.5 0.65 } scale = { 0.035 0.05 } }
+		instance = { position = { 0.53 0.59 } scale = { 0.035 0.05 } }
+	}
+	colored_emblem = {
+		texture = "europe/POR/POR_castle.dds"
+		color1 = "POR_yellow"
+		color2 = "full_black"
+		color3 = "full_black"
+		instance = { position = { 0.43 0.58 } scale = { 0.04 0.05 } }
+		instance = { position = { 0.43 0.46 } scale = { 0.04 0.05 } }
+		instance = { position = { 0.43 0.7 } scale = { 0.04 0.05 } }
+		instance = { position = { 0.57 0.58 } scale = { 0.04 0.05 } }
+		instance = { position = { 0.57 0.46 } scale = { 0.04 0.05 } }
+		instance = { position = { 0.57 0.7 } scale = { 0.04 0.05 } }
+		instance = { position = { 0.5 0.46 } scale = { 0.04 0.05 } }
+	}
+	colored_emblem = {
+		texture = "europe/POR/POR_crown.dds"
+		color1 = "POR_yellow"
+		color2 = "POR_red"
+		color3 = "SPA_green"
+		instance = { position = { 0.5 0.22 } scale = { 0.26 0.4 } }
+	}
+}
+```
+#### Result
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/ready_flag.png?raw=true" alt="" width="470" height="102">
