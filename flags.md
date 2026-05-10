@@ -106,13 +106,16 @@ The vanilla version of **ImperatorRome** uses **emblem** with only 2 colors when
 | custom | color1 | 0 | 0 | 128 |
 | custom | color2 | 0 | 255 | 128 |
 | custom | color3 | 255 | 0 | 128 |
+
 By default, the brightness is 128, when using values in the range from 0 to 255, the set color will be darker or brighter, respectively.
+
 Visual range of colors (not exact): **Vanilla**/**Custom**
-<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-1.png?raw=true" alt="" width="128" height="85">
-<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-2.png?raw=true" alt="" width="128" height="85">
+
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-1.png?raw=true" alt="" width="128" height="85"> <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-2.png?raw=true" alt="" width="128" height="85">
+
 Example emblems: **Vanilla**/**Custom**
-<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-4.png?raw=true" alt="" width="128" height="128">
-<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-5.png?raw=true" alt="" width="128" height="128">
+
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-4.png?raw=true" alt="" width="128" height="128"> <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-5.png?raw=true" alt="" width="128" height="128">
 
 #### Example
 ```
