@@ -187,6 +187,10 @@ Due to errors during export, completely transparent white pixels may appear, the
 
 <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-7-paintnet.png?raw=true" alt="" width="465" height="297">
 
+### Alpha Channel Filtering
+A simple shader add-on for alpha channel filtering removes the *glow effect* around the **color_emblem**.
+`[gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.fxh](https://github.com/MIUNO/ImperatorRomeNotes/blob/main/gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.fxh)`
+
 ## Ready flag example
 ```
 POR = {
