@@ -178,6 +178,14 @@ This can be fixed by adding black to the remaining colors, for example.
 ```
 <img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/color_fix.png?raw=true" alt="" width="470" height="102">
 
+### White artifacts
+The brother of the pink artifact, but white
+
+#### Example fix
+Due to errors during export, completely transparent white pixels may appear, they are to blame for everything. To fix this, you need to select all these pixels and delete them, as a result they will turn black with the same completely transparency.
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-6-paintnet.png?raw=true" alt="" width="470" height="102">
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-7-paintnet.png?raw=true" alt="" width="470" height="102">
+
 ## Ready flag example
 ```
 POR = {
