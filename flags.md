@@ -183,9 +183,10 @@ The brother of the pink artifact, but white
 
 #### Example fix
 Due to errors during export, completely transparent white pixels may appear, they are to blame for everything. To fix this, you need to select all these pixels and delete them, as a result they will turn black with the same completely transparency.
-<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-6-paintnet.png?raw=true" alt="" width="709" height="187">
 
-<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-7-paintnet.png?raw=true" alt="" width="465" height="297">
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-6-paintnet.png?raw=true" alt="" width="297" height="297">
+
+<img src="https://github.com/MIUNO/ImperatorRomeNotes/blob/main/images/example-7-paintnet.png?raw=true" alt="" width="709" height="187">
 
 ### Alpha Channel Filtering
 A simple shader add-on for alpha channel filtering removes the *glow effect* around the **color_emblem**.
