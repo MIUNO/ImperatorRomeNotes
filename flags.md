@@ -95,7 +95,7 @@ They use images from the directory `gfx/coat_of_arms/textured_emblems/`.
 
 ### Colored emblem
 They use images from the directory `gfx/coat_of_arms/colored_emblems/`.
-The vanilla version of **ImperatorRome** uses **emblem** with only 2 colors when using the file `[gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.shader](https://github.com/MIUNO/ImperatorRomeNotes/blob/main/gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.shader)` they can be expanded to 3x, but vanilla emblems will no longer work, while you can use emblems from new *Paradox* games such as **ck3**, **vic3** or **eu5**.
+The vanilla version of **ImperatorRome** uses **emblem** with only 2 colors when using the file [gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.shader](https://github.com/MIUNO/ImperatorRomeNotes/blob/main/gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.shader) they can be expanded to 3x, but vanilla emblems will no longer work, while you can use emblems from new *Paradox* games such as **ck3**, **vic3** or **eu5**.
 
 #### Colored emblem colors
 | color | name | R | G | B (brightness) |
@@ -189,7 +189,7 @@ Due to errors during export, completely transparent white pixels may appear, the
 
 ### Alpha Channel Filtering
 A simple shader add-on for alpha channel filtering removes the *glow effect* around the **color_emblem**.
-`[gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.fxh](https://github.com/MIUNO/ImperatorRomeNotes/blob/main/gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.fxh)`
+[gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.fxh](https://github.com/MIUNO/ImperatorRomeNotes/blob/main/gfx/FX/coat_of_arms/coat_of_arms_textured_emblem.fxh)
 
 ## Ready flag example
 ```
