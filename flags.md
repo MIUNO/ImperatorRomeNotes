@@ -191,7 +191,8 @@ Due to errors during export, completely transparent white pixels may appear, the
 ### Black outline
 
 #### Fix
-Need download *ImageMagick*
+Need download *ImageMagick*.
+
 ```magick flag.dds -fill rgba(0,0,128,0.0) -opaque none flag.png```
 
 ### Alpha Channel Filtering
