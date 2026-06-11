@@ -279,6 +279,6 @@ function copyToClipboard(elementId) {
   const green = parseInt(elementId.substring(3, 5), 16);
   const blue = parseInt(elementId.substring(5, 7), 16);
 
-  const rgb = "= rgb { " + red + " " + green + " " + blue + " }";
+  const rgb = " = rgb { " + red + " " + green + " " + blue + " }";
   navigator.clipboard.writeText(rgb);
 }
